@@ -1,6 +1,5 @@
 <div align="center">
-# ft_printf
-<h1>Born2beRoot</h1>
+<h1>ft_printf</h1>
 <img src="https://raw.githubusercontent.com/yowcloud/yowcloud-my-utils/main/badge_ft_printf_500px.png" style="width: 150px; height: 150px;">
 
 
