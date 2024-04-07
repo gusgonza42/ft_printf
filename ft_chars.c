@@ -10,3 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+int	ft_putchar(char c)
+{
+	if (write(1, &c, 1) == -1)
+		return (-1);
+	return (1);
+}
+
+int	ft_putstr(char *str)
+{
+	int	pos;
+
+	pos = 0;
+	if (!str)
+		str = "(null)";
+	while (str[pos])
+	{
+		if (write(1, &str[pos], 1) == -1)
+			return (-1);
+		pos++;
+	}
+	return (pos);
+}
