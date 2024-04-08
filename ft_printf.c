@@ -6,7 +6,7 @@
 /*   By: gusgonza <gusgonza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:29:04 by gusgonza          #+#    #+#             */
-/*   Updated: 2024/03/11 19:29:06 by gusgonza         ###   ########.fr       */
+/*   Updated: 2024/04/08 09:18:37 by gusgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_format_check(const char format, va_list args){
 		length = ft_putchar('%');
 	if (length == -1)
 		return (-1);
-		return (length);
+	return (length);
 }
 
 int	ft_printf(const char *format, ...)
