@@ -6,14 +6,15 @@
 /*   By: gusgonza <gusgonza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:29:04 by gusgonza          #+#    #+#             */
-/*   Updated: 2024/04/08 09:18:37 by gusgonza         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:42:01 by gusgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_format_check(const char format, va_list args){
-	int length;
+static int	ft_format_check(const char format, va_list args)
+{
+	int	length;
 
 	length = 0;
 	if (format == 'c')

@@ -6,11 +6,9 @@
 /*   By: gusgonza <gusgonza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:36:13 by gusgonza          #+#    #+#             */
-/*   Updated: 2024/03/11 19:36:15 by gusgonza         ###   ########.fr       */
+/*   Updated: 2024/04/11 17:42:25 by gusgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
