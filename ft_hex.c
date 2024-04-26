@@ -18,7 +18,7 @@ long	ft_puthexa(unsigned long nb, char *base, int isptr)
 	int	check;
 
 	length = 0;
-	if (isptr == 1)
+	if (isptr)
 	{
 		if (ft_putstr("0x") == -1)
 			return (-1);

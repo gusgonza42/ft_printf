@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusgonza <gusgonza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 19:36:13 by gusgonza          #+#    #+#             */
-/*   Updated: 2024/03/11 19:36:15 by gusgonza         ###   ########.fr       */
+/*   Created: 2024/04/08 14:04:00 by gusgonza          #+#    #+#             */
+/*   Updated: 2024/04/08 14:04:02 by gusgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdio.h>
+#include "get_next_line.h"
 
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+int	main(void)
+{
+	int		fd;
+	char	*str;
 
-// FORMATS OF PRINT
-int		ft_printf(char const *str, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *str);
-long	ft_putnbr(long nb);
-long	ft_puthexa(unsigned long nb, char *base, int isptr);
+	fd = open("yowTest.txt", O_RDONLY);
+	if (fd == -1)
+	{
+		perror("Error open\n");
+		return (1);
+	}
+	while ((str = get_next_line(fd)) != NULL)
+	{
+		if (str == NULL)
+			printf("Error dont read line");
+		else
+		{
+			printf("Result line: %s \n", str);
+			free(str);
+		}
+	}
 
-#endif
+	close(fd);
+
+	return (0);
+}
+
