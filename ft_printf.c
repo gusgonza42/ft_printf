@@ -22,15 +22,15 @@ static int	ft_format_check(const char format, va_list args)
 	else if (format == 's')
 		length = ft_putstr(va_arg(args, char *));
 	else if (format == 'p')
-		length = ft_puthexa(va_arg(args, unsigned long), "0123456789abcdef", 1);
+		length = ft_puthexa(va_arg(args, unsigned long), LHEX_BASE, 1);
 	else if (format == 'd' || format == 'i')
 		length = ft_putnbr(va_arg(args, int));
 	else if (format == 'u')
 		length = ft_putnbr(va_arg(args, unsigned int));
 	else if (format == 'x')
-		length = ft_puthexa(va_arg(args, unsigned int), "0123456789abcdef", 0);
+		length = ft_puthexa(va_arg(args, unsigned int), LHEX_BASE, 0);
 	else if (format == 'X')
-		length = ft_puthexa(va_arg(args, unsigned int), "0123456789ABCDEF", 0);
+		length = ft_puthexa(va_arg(args, unsigned int), UHEX_BASE, 0);
 	else if (format == '%')
 		length = ft_putchar('%');
 	if (length == -1)

@@ -17,6 +17,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define LHEX_BASE "0123456789abcdef"
+# define UHEX_BASE "0123456789ABCDEF"
+
 // FORMATS OF PRINT
 int		ft_printf(char const *str, ...);
 int		ft_putchar(char c);

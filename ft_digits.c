@@ -12,29 +12,29 @@
 
 #include "ft_printf.h"
 
-long	ft_putnbr(long nb)
+long	ft_putnbr(long number)
 {
 	int	length;
-	int	check;
+	int	recursive_length;
 
 	length = 0;
-	if (nb < 0)
+	if (number < 0)
 	{
 		if (ft_putchar('-') == -1)
 			return (-1);
 		length++;
-		nb = -nb;
+		number = -number;
 	}
-	if (nb > 9)
+	if (number > 9)
 	{
-		check = ft_putnbr(nb / 10);
-		if (check == -1 || ft_putchar((nb % 10) + 48) == -1)
+		recursive_length = ft_putnbr(number / 10);
+		if (recursive_length == -1 || ft_putchar((number % 10) + 48) == -1)
 			return (-1);
-		length += check + 1;
+		length += recursive_length + 1;
 	}
 	else
 	{
-		if (ft_putchar(nb + 48) == -1)
+		if (ft_putchar(number + 48) == -1)
 			return (-1);
 		length++;
 	}
